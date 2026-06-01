@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baia de Fier · Galerie</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .gal-full { columns: 3; gap: 12px; }
+    @media(max-width:920px){ .gal-full { columns:2; } }
+    @media(max-width:600px){ .gal-full { columns:1; } }
+    .gf-cat { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 2rem; }
+    .gf-btn { padding: 7px 18px; border-radius: 100px; font-size: .83rem; font-weight: 500; cursor: pointer; border: 1.5px solid #DEDED8; background: #fff; color: var(--gray); transition: all .2s; font-family: var(--fb); }
+    .gf-btn.a { background: var(--gd); color: #fff; border-color: var(--gd); }
+    .gf-btn:hover:not(.a) { border-color: var(--gm); color: var(--gd); }
+  </style>
+</head>
+<body data-page="galerie">
+
+<div class="ph">
+  <div class="ph-bg" style="background-image:url('https://picsum.photos/seed/gal-01/1400/600')"></div>
+  <div class="ph-cnt wrap">
+    <span class="stag">Galerie</span>
+    <h1 class="ph-title" data-ro="Imagini din inima Gorjului" data-en="Images from the heart of Gorj">Imagini din inima Gorjului</h1>
+    <p class="ph-sub" data-ro="Peisaje, activități și momente autentice din Baia de Fier &amp; Polovragi." data-en="Landscapes, activities and authentic moments from Baia de Fier &amp; Polovragi.">
+      Peisaje, activități și momente autentice din Baia de Fier &amp; Polovragi.
+    </p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="gf-cat fi-in">
+      <button class="gf-btn a" onclick="filtGal(this,'all')"        data-ro="Toate"       data-en="All">Toate</button>
+      <button class="gf-btn"   onclick="filtGal(this,'activitati')" data-ro="Activități"  data-en="Activities">Activități</button>
+      <button class="gf-btn"   onclick="filtGal(this,'natura')"     data-ro="Natură"      data-en="Nature">Natură</button>
+      <button class="gf-btn"   onclick="filtGal(this,'oameni')"     data-ro="Oameni"      data-en="People">Oameni</button>
+    </div>
+    <div class="gal-full fi-in" id="gal">
+      <div class="gi" data-cat="natura"    onclick="openLb(this)"><img src="natura1.png" alt="Peisaj 1"><div class="gi-ov"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gi" data-cat="activitati" onclick="openLb(this)"><img src="activitati.png" alt="Activitate 1"><div class="gi-ov"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gi" data-cat="natura"     onclick="openLb(this)"><img src="natura2.png" alt="Natură 1"><div class="gi-ov"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gi" data-cat="activitati" onclick="openLb(this)"><img src="activitati2.png" alt="Activitate 2"><div class="gi-ov"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gi" data-cat="peisaje"    onclick="openLb(this)"><img src="https://picsum.photos/seed/gal-05/600/430" alt="Peisaj 2"><div class="gi-ov"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gi" data-cat="oameni"     onclick="openLb(this)"><img src="oameni.png" alt="Oameni 1"><div class="gi-ov"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gi" data-cat="natura"     onclick="openLb(this)"><img src="natura3.png" alt="Natură 2"><div class="gi-ov"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gi" data-cat="oameni"     onclick="openLb(this)"><img src="oameni2.png" alt="Oameni 2"><div class="gi-ov"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gi" data-cat="activitati" onclick="openLb(this)"><img src="activitati3.png" alt="Activitate 3"><div class="gi-ov"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gi" data-cat="peisaje"    onclick="openLb(this)"><img src="https://picsum.photos/seed/gal-09/600/500" alt="Peisaj 3"><div class="gi-ov"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gi" data-cat="oameni"     onclick="openLb(this)"><img src="oameni1.png" alt="Oameni 2"><div class="gi-ov"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gi" data-cat="natura"     onclick="openLb(this)"><img src="natura4.png" alt="Natură 3"><div class="gi-ov"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+      <div class="gi" data-cat="activitati" onclick="openLb(this)"><img src="activitati4.png" alt="Activitate 4"><div class="gi-ov"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></div></div>
+    </div>
+  </div>
+</section>
+
+<script>
+function filtGal(btn, cat) {
+  document.querySelectorAll('.gf-btn').forEach(b => b.classList.remove('a'));
+  btn.classList.add('a');
+  document.querySelectorAll('#gal .gi').forEach(g => {
+    g.style.display = (cat === 'all' || g.dataset.cat === cat) ? '' : 'none';
+  });
+}
+</script>
+<script src="components.js"></script>
+</body>
+</html>

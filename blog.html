@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baia de Fier · Blog &amp; Ghid Turistic</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .bl-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.35rem; }
+    @media(max-width:920px){ .bl-grid { grid-template-columns:1fr 1fr; } }
+    @media(max-width:600px){ .bl-grid { grid-template-columns:1fr; } }
+    .bl-featured { display: grid; grid-template-columns: 1.4fr 1fr; gap: 2rem; margin-bottom: 3rem; }
+    .bl-feat-card { border-radius: 14px; overflow: hidden; border: 1px solid #E8E8E4; background: #fff; transition: transform .25s, box-shadow .25s; }
+    .bl-feat-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,.1); }
+    .bl-feat-img { height: 340px; background-size: cover; background-position: center; }
+    .bl-feat-body { padding: 2rem; }
+    .bl-feat-body .bl-cat { margin-bottom: .6rem; }
+    .bl-feat-body .bl-title { font-family: var(--fd); font-size: 1.5rem; margin-bottom: .75rem; line-height: 1.2; }
+    .bl-feat-body .bl-exc { font-size: .9rem; color: var(--gray); line-height: 1.7; margin-bottom: 1.25rem; }
+    @media(max-width:920px){ .bl-featured { grid-template-columns:1fr; } .bl-feat-img { height:240px; } }
+  </style>
+</head>
+<body data-page="blog">
+
+<div class="ph">
+  <div class="ph-bg" style="background-image:url('https://picsum.photos/seed/blog-trails3/1400/600')"></div>
+  <div class="ph-cnt wrap">
+    <span class="stag" data-ro="Ghid turistic" data-en="Travel guide">Ghid turistic</span>
+    <h1 class="ph-title" data-ro="Blog &amp; Ghid" data-en="Blog &amp; Guide">Blog &amp; Ghid</h1>
+    <p class="ph-sub" data-ro="Sfaturi practice, ghiduri de siguranță, echipament recomandat și top trasee pentru orice nivel de experiență." data-en="Practical tips, safety guides, recommended equipment and top trails for any experience level.">Sfaturi practice, ghiduri de siguranță, echipament recomandat și top trasee pentru orice nivel de experiență.</p>
+  </div>
+</div>
+
+<!-- ══ FEATURED ══ -->
+<section>
+  <div class="wrap">
+    <div class="sh fi-in">
+      <span class="stag" data-ro="Articol recomandat" data-en="Featured article">Articol recomandat</span>
+    </div>
+    <div class="bl-featured fi-in">
+      <div class="bl-feat-card" onclick="openArticle('gear')" style="cursor:pointer">
+        <div class="bl-feat-img" style="background-image:url('https://contents.mediadecathlon.com/p2894906/k$0b443c9e25408b5d64302c4f862b2911/1920x0/3000pt1999/6000xcr3998/default.jpg?format=auto')"></div>
+        <div class="bl-feat-body">
+          <div class="bl-cat" data-ro="Echipament" data-en="Equipment">Echipament</div>
+          <div class="bl-title" data-ro="Ce echipament ai nevoie pentru via ferrata?" data-en="What equipment do you need for via ferrata?">Ce echipament ai nevoie pentru via ferrata?</div>
+          <div class="bl-exc" data-ro="Ham, longe ABC, cască, mănuși, bocanci — tot ce trebuie să știi înainte de a te urca pe cablu. Ce să cumperi, ce să închiriezi și unde găsești echipament în Gorj." data-en="Harness, ABC lanyard, helmet, gloves, boots — everything you need to know before getting on the cable. What to buy, what to rent and where to find equipment in Gorj.">Ham, longe ABC, cască, mănuși, bocanci — tot ce trebuie să știi înainte de a te urca pe cablu. Ce să cumperi, ce să închiriezi și unde găsești echipament în Gorj.</div>
+          <span class="btn btn-g" style="pointer-events:none" data-ro="Citește articolul" data-en="Read article">Citește articolul</span>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1.25rem">
+        <div class="bl-feat-card" onclick="openArticle('safety')" style="cursor:pointer;flex:1">
+          <div class="bl-feat-img" style="height:160px;background-image:url('https://www.experimenteaza.ro/img/cms/Blog%20images/trasee-montane-romania-14.jpg')"></div>
+          <div class="bl-feat-body" style="padding:1.25rem">
+            <div class="bl-cat" data-ro="Siguranță" data-en="Safety">Siguranță</div>
+            <div class="bl-title" style="font-size:1.05rem" data-ro="Ghid de siguranță montană" data-en="Mountain safety guide">Ghid de siguranță montană</div>
+            <div class="bl-exc" style="font-size:.84rem" data-ro="Reguli esențiale, numărul Salvamont și ce faci dacă te rătăcești." data-en="Essential rules, the Salvamont number and what to do if you get lost.">Reguli esențiale, numărul Salvamont și ce faci dacă te rătăcești.</div>
+          </div>
+          <div class="bl-ft"><span data-ro="7 min citit" data-en="7 min read">7 min citit</span><span style="color:var(--gm);font-weight:600" data-ro="Citește →" data-en="Read →">Citește →</span></div>
+        </div>
+        <div class="bl-feat-card" onclick="openArticle('trails')" style="cursor:pointer;flex:1">
+          <div class="bl-feat-img" style="height:160px;background-image:url('https://lh4.googleusercontent.com/proxy/icbj_OOgL5id1TgN_hghYAtWOXfyF91XbpGsp7jiuIK8augYMpP3VASPiBxEh7qeA1uzDY6T6EzM1kDICVzZxSq8J-4b9YzqGs_ooemipY5tjv-e3GSs1U4s4Q')"></div>
+          <div class="bl-feat-body" style="padding:1.25rem">
+            <div class="bl-cat" data-ro="Trasee" data-en="Trails">Trasee</div>
+            <div class="bl-title" style="font-size:1.05rem" data-ro="Top 5 trasee pentru începători" data-en="Top 5 beginner trails">Top 5 trasee pentru începători</div>
+            <div class="bl-exc" style="font-size:.84rem" data-ro="Selecție de trasee ușoare și medii pentru prima vizită în Baia de Fier." data-en="Selection of easy and medium trails for a first visit to Baia de Fier.">Selecție de trasee ușoare și medii pentru prima vizită în Baia de Fier.</div>
+          </div>
+          <div class="bl-ft"><span data-ro="6 min citit" data-en="6 min read">6 min citit</span><span style="color:var(--gm);font-weight:600" data-ro="Citește →" data-en="Read →">Citește →</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TOATE ARTICOLELE ══ -->
+<section class="sec-alt">
+  <div class="wrap">
+    <div class="sh fi-in">
+      <span class="stag" data-ro="Toate articolele" data-en="All articles">Toate articolele</span>
+      <h2 class="stitle" data-ro="Sfaturi pentru turiști" data-en="Tips for tourists">Sfaturi pentru turiști</h2>
+      <p class="ssub" data-ro="Apasă pe orice articol pentru a-l citi integral." data-en="Click on any article to read it in full.">Apasă pe orice articol pentru a-l citi integral.</p>
+    </div>
+    <div class="bl-grid fi-in">
+
+      <div class="bl-card" onclick="openArticle('food')">
+        <div class="bl-img" style="background-image:url('https://www.e-retete.ro/files/recipes/mamaliguta-la-cuptor.jpg')"></div>
+        <div class="bl-body">
+          <div class="bl-cat" data-ro="Gastronomie" data-en="Gastronomy">Gastronomie</div>
+          <div class="bl-title" data-ro="Ce să mănânci în Gorj — bucătărie tradițională" data-en="What to eat in Gorj — traditional cuisine">Ce să mănânci în Gorj — bucătărie tradițională</div>
+          <div class="bl-exc" data-ro="Ciorba de burtă gorjeană, miel la proțap, mămăligă cu brânză de burduf — preparate care nu se găsesc în niciun restaurant de oraș." data-en="Gorj tripe soup, spit-roasted lamb, polenta with sheep cheese — dishes you won't find in any city restaurant.">Ciorba de burtă gorjeană, miel la proțap, mămăligă cu brânză de burduf — preparate care nu se găsesc în niciun restaurant de oraș.</div>
+        </div>
+        <div class="bl-ft"><span data-ro="Gastronomie" data-en="Gastronomy">Gastronomie</span><span data-ro="4 min citit" data-en="4 min read">4 min citit</span></div>
+      </div>
+
+      <div class="bl-card" onclick="openArticle('season')">
+        <div class="bl-img" style="background-image:url('https://picsum.photos/seed/blog-weather1/600/300')"></div>
+        <div class="bl-body">
+          <div class="bl-cat" data-ro="Planificare" data-en="Planning">Planificare</div>
+          <div class="bl-title" data-ro="Cea mai bună perioadă pentru a vizita Gorjul" data-en="Best time to visit Gorj">Cea mai bună perioadă pentru a vizita Gorjul</div>
+          <div class="bl-exc" data-ro="Ghid complet per sezon — ce activități sunt disponibile, temperaturi și sfaturi practice pentru fiecare perioadă a anului." data-en="Complete seasonal guide — what activities are available, temperatures and practical tips for each time of year.">Ghid complet per sezon — ce activități sunt disponibile, temperaturi și sfaturi practice pentru fiecare perioadă a anului.</div>
+        </div>
+        <div class="bl-ft"><span data-ro="Planificare" data-en="Planning">Planificare</span><span data-ro="5 min citit" data-en="5 min read">5 min citit</span></div>
+      </div>
+
+      <div class="bl-card" onclick="openArticle('family')">
+        <div class="bl-img" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_4CjuCdZ4XzBA4hDPydSouZMNAb34M56iOw&s')"></div>
+        <div class="bl-body">
+          <div class="bl-cat" data-ro="Familie" data-en="Family">Familie</div>
+          <div class="bl-title" data-ro="Gorj cu copii — ce activități sunt potrivite?" data-en="Gorj with kids — what activities are suitable?">Gorj cu copii — ce activități sunt potrivite?</div>
+          <div class="bl-exc" data-ro="Ce poți face cu copiii de diferite vârste — de la Peștera Polovragi la via ferrata de la 12 ani. Sfaturi practice pentru familii." data-en="What to do with children of different ages — from Polovragi Cave to via ferrata from age 12. Practical tips for families.">Ce poți face cu copiii de diferite vârste — de la Peștera Polovragi la via ferrata de la 12 ani. Sfaturi practice pentru familii.</div>
+        </div>
+        <div class="bl-ft"><span data-ro="Familie" data-en="Family">Familie</span><span data-ro="5 min citit" data-en="5 min read">5 min citit</span></div>
+      </div>
+
+      <div class="bl-card" onclick="openArticle('photo')">
+        <div class="bl-img" style="background-image:url('https://www.radiooltenia.ro/wp-content/uploads/2024/04/polovragi.jpg')"></div>
+        <div class="bl-body">
+          <div class="bl-cat" data-ro="Fotografie" data-en="Photography">Fotografie</div>
+          <div class="bl-title" data-ro="Cele mai bune locuri foto din Gorj" data-en="Best photo spots in Gorj">Cele mai bune locuri foto din Gorj</div>
+          <div class="bl-exc" data-ro="Top locații pentru fotografii spectaculoase — ora de aur la Cheile Olteților, mănăstirea iarna, creastă Parâng în iulie." data-en="Top locations for spectacular photos — golden hour at Cheile Olteților, the monastery in winter, Parâng ridge in July.">Top locații pentru fotografii spectaculoase — ora de aur la Cheile Olteților, mănăstirea iarna, creastă Parâng în iulie.</div>
+        </div>
+        <div class="bl-ft"><span data-ro="Fotografie" data-en="Photography">Fotografie</span><span data-ro="6 min citit" data-en="6 min read">6 min citit</span></div>
+      </div>
+
+      <div class="bl-card" onclick="openArticle('pack')">
+        <div class="bl-img" style="background-image:url('https://cdn.backpacker.com/wp-content/uploads/2025/04/backpacking-maven-Megan-Robertson_h.jpg')"></div>
+        <div class="bl-body">
+          <div class="bl-cat" data-ro="Pregătire" data-en="Preparation">Pregătire</div>
+          <div class="bl-title" data-ro="Ce să pui în rucsac — checklist complet" data-en="What to pack — complete checklist">Ce să pui în rucsac — checklist complet</div>
+          <div class="bl-exc" data-ro="Liste complete pentru drumeție de zi, via ferrata și body rafting. Regula de aur: dacă te gândești că nu ai nevoie — pune-l oricum." data-en="Complete lists for a day hike, via ferrata and body rafting. Golden rule: if you think you don't need it — pack it anyway.">Liste complete pentru drumeție de zi, via ferrata și body rafting. Regula de aur: dacă te gândești că nu ai nevoie — pune-l oricum.</div>
+        </div>
+        <div class="bl-ft"><span data-ro="Pregătire" data-en="Preparation">Pregătire</span><span data-ro="3 min citit" data-en="3 min read">3 min citit</span></div>
+      </div>
+
+      <div class="bl-card" onclick="openArticle('gear')">
+        <div class="bl-img" style="background-image:url('https://contents.mediadecathlon.com/p2894906/k$0b443c9e25408b5d64302c4f862b2911/1920x0/3000pt1999/6000xcr3998/default.jpg?format=auto')"></div>
+        <div class="bl-body">
+          <div class="bl-cat" data-ro="Echipament" data-en="Equipment">Echipament</div>
+          <div class="bl-title" data-ro="Ce echipament ai nevoie pentru via ferrata?" data-en="What equipment do you need for via ferrata?">Ce echipament ai nevoie pentru via ferrata?</div>
+          <div class="bl-exc" data-ro="Ghid complet de echipament — ce cumperi, ce închiriezi și de ce longe simplă este interzisă pe via ferrata." data-en="Complete equipment guide — what to buy, what to rent and why a simple lanyard is forbidden on via ferrata.">Ghid complet de echipament — ce cumperi, ce închiriezi și de ce longe simplă este interzisă pe via ferrata.</div>
+        </div>
+        <div class="bl-ft"><span data-ro="Echipament" data-en="Equipment">Echipament</span><span data-ro="5 min citit" data-en="5 min read">5 min citit</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script src="components.js"></script>
+<script src="articles.js"></script>
+</body>
+</html>
